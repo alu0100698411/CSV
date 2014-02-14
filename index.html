@@ -1,0 +1,43 @@
+<html>
+  <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <title>CSV Analyzer</title>
+     <link href="css/global.css" rel="stylesheet" type="text/css">
+
+     <script type="text/javascript" src="javascript/underscore-min.js"></script>
+     <script type="text/javascript" src="javascript/jquery-1.11.0.min.js"></script>
+     <script type="text/javascript" src="javascript/commavalues.js"></script>
+	 <script type="text/html" id='underscoreTemplate'>
+		 <% _.each(items, function(name) { %>
+			<td><%= name %></td>
+		 <% }); %>
+	</script>
+  </head>
+  <body>
+    <div id="wrapper">
+        <header>
+            <img src="imgs/logo.png" alt="CVS, Logo">
+        </header>
+		<section id="content">
+			<h1>Comma Separated Value Analyzer</h1>
+			<h2>How it works?</h2>
+			<ol>
+			  <li>Write a CSV string.</li>
+			  <li>Click the table button.</li>
+			  <li>The program outputs a table with the specified data.</li>
+			</ol>
+			<table>
+			  <tr>
+				<th>CSV string:</th> <!-- autofocus attribute is HTML5 -->
+				<td><textarea autofocus cols = "80" rows = "5" id="original"></textarea></td> 
+			  </tr>
+			</table>
+			<div class="centerdiv"><button type="button"> GET TABLE</button></div>
+			<h3><a href="tests/index.html">View</a> test suite using Mocha+Chai</h3>
+			<span class="output" id="finaltable"></span>
+		<section>
+    </div>
+  </body>
+</html>
+
+
